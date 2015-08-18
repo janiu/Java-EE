@@ -1,0 +1,27 @@
+<body>
+    <!-- Tag ten szuka obiektu klasy User. Jeśli znajdzie, to go wykorzysta, jeśli nie stworzy nowy obiekt klasy user o nazwie "user"-->
+    <jsp:useBean id="user" class="javastart.jspexample.model.User" scope="session"></jsp:useBean>
+ 
+    <!-- Tag ten umieszcza wszystkie parametry przesyłane z innych plików jsp pasujące do obiektu o nazwie user. 
+    Jeśli parametry te nie będą się zgadzać, tomcat wyrzuci wyjątkiem -->
+    <jsp:setProperty property="*" name="user" />
+ 
+    <!-- Ponowne użycie tagu jsp:useBean ładujący źródło danych. -->
+    <jsp:useBean id="dataSource"
+        class="javastart.jspexample.model.DataSource" scope="session"></jsp:useBean>
+ 
+    <!-- Logika sprawdzająca poprawność parametrów logowania. -->
+    <% String result = "";
+ 
+    if(dataSource.userExists(user)) {             //funkcja zaimplementowana w klasie DataSource
+        result = "Poprawny użytkownik oraz hasło";
+        }
+        else
+        {
+        result = "Blad"
+        }
+    %>
+ 
+    <!-- Zwrócenie wynikowego stringa "result" -->
+    <%= result %>
+</body>
