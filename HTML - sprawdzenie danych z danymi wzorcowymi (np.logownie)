@@ -25,3 +25,10 @@
     <!-- Zwrócenie wynikowego stringa "result" -->
     <%= result %>
 </body>
+
+ <!--  /////////////////////////////////////////////////////////////////////// 
+W klasie User jest po prostu struktura uzytkownika tj.login i haslo
+W kalsie DataSource jest:
+- HasMapa ktora przechowuje uzytkownikow
+- funkcja sprawdzajaca czy w HashMaie jest dany uzytkownik
+-->
