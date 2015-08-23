@@ -1,0 +1,26 @@
+1) Object getParametr(String nazwa) 
+pobiera parametr o danej nazwie przesanie w żdaniu
+
+2) Enumeration <String> getParametersNames()
+pobiera nazwy wszytskich parametrów znajdujacych sie w danym żadaniu
+
+3) String getRemoteUser()
+zwraca login uwierzytelnionego uzytkownika lub null, w przypadku braku uwierzytelnienia
+
+4) Cookie[] getCookies()
+zwraca tablice ciastek
+
+5) String getQueryString()
+zwraca lancuch parametrow, przeslanych w adresie URL
+
+6) String getHeader(String nazwa)
+zwraca wartosc naglowka HTTP o podanej nazwie 
+
+7) String getContextPath()
+zwraca sciezke kotekstu aplikacji
+
+8)String getServletPath()
+zwraca sciezke dostepu do serwletu
+
+9)String getPathInfo()
+zwraca dodatkowe informacje zawarte w sciezce
