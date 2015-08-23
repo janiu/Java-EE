@@ -1,0 +1,23 @@
+1) ServletOutputStream getOutputStream()
+// zwraca strumien zapisu danych binarnych
+ 
+2) PrinterWriter getWriter()
+// zwraca obiekt zapisujacy dla danych tekstowych
+ 
+3) void addCookie(Cookie c)
+// dodanie ciastka
+ 
+ 4)void addHeader(String name, String value)
+// dodaje podana wartosc do juz istniejacej zawartosci naglowka 
+ 
+ 5) void setHeader(String name, String value)
+// zastapi wartosc naglowka jezeli taka istnieje
+
+6) void sendError(int kod)
+// przekazanie kodu odpowiedzi
+
+7) void sendError(int kod, String komunikat)
+// przekazywanie kodu bedu
+
+8) void sendRedirect(String adres)
+// przekierowanie
