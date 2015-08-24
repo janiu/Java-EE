@@ -1,0 +1,16 @@
+HttpSession session = request.getSession(true);
+//metoda zwraca obiekt sesji lub tworzy nowy, jezeli ten nie istenieje
+
+HttpSession session = request.getSession(false);
+//metoda zwraca obiekt sesji lub null, jeli ten istnieje
+
+
+** Najważniejsze metody interfejsu HTTPSession:
+void setAttribute(n,o)                         Zapamiętuje na czas sesji obiekt pod podaną nazwą
+String getId()                                    Zwraca aktualny identyfikator sesji.
+boolean isNew()                                 Zwraca wartość true, jeśli klient nie odesłał jeszcze żądania z danym identyfikatorem sesji.
+long getCreationTime()                       Zwraca czas utworzenia sesji.
+long getLastAccessedTime()                       Zwraca czas otrzymania przez kontener ostatniego żądania z danymidentyfikatorem sesji.
+void setMaxInactivateInterval(int)       Ustawia maksymalny czas (wyrażony w sekundach) pomiędzy kolejnymi żądaniami klienta
+int getMaxInactiveInterval()                       Zwraca  maksymalny czas (wyrażony w sekundach) pomiędzy kolejnymi żądaniami
+void invalidate()                                 Kończy sesję.
