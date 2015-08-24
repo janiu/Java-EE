@@ -1,0 +1,16 @@
+     Cookie(n, s) - tworzy zmienną o nazwie n i wartości s
+
+    String getDomain() - odczyt adresu domenowego dla, którego przeznaczona jest zmienna s
+    void setDomain(s) - ustawia adres domenowy dla, którego przeznaczona jest zmienna s
+
+    String getMaxAge() - odczyt czasu życia zmiennej liczony w sekundach
+    void setMaxAge(v) - ustawia czas życia zmiennej liczony w sekundach
+
+    String getName() - odczyt nazwy zmiennej
+    void setName(s) - ustawia zmienną
+
+    String getPath() - odczyt prefiksu ścieżki URL na serwerze, dla której przeznaczona jest zmienna
+    void setPath(s) - ustawia prefiks ścieżki URL na serwerze, dla której przeznaczona jest zmienna
+
+    String getValue() - odczyt wartości zmiennej
+    void setValue(s) - ustawia wartość zmiennej
