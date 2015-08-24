@@ -1,0 +1,10 @@
+		PrintWriter out = response.getWriter();
+        if(request.getSession(false)==null)
+        {
+        	out.println("Pierwszy raz");
+        	request.getSession();
+        }
+        else
+        {
+        	out.println("Kolejny raz");
+        }
