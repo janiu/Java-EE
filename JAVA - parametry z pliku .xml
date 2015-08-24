@@ -1,0 +1,15 @@
+XML
+
+  <servlet>
+    ....
+    <init-param>
+    	<param-name>autor</param-name>
+    	<param-value>Rafal</param-value>
+    </init-param>
+    .....
+  </servlet>
+  
+  
+  JAVA
+  PrintWriter out = response.getWriter();
+	out.println(this.getInitParameter("autor"));
