@@ -12,4 +12,12 @@ XML
   
   JAVA
   PrintWriter out = response.getWriter();
-	out.println(this.getInitParameter("autor"));
+  out.println(this.getInitParameter("autor"));  //wyswietlenie wartosci parametru o nazwie "autor"
+  
+  Enumeration<String>tab=this.getInitParameterNames();	//wyswietlanie nazwy wsyztskich parametrów
+	while(tab.hasMoreElements())
+	{
+		Object temp = tab.nextElement();
+		String temp2 = (String)temp;
+		out.println(temp2);
+	}
