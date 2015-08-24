@@ -1,0 +1,12 @@
+		Cookie lastVisit = null;          
+		for (Cookie c : request.getCookies())
+			if (c.getName().equals("obecnosc")) {
+				lastVisit = c;
+				break;
+			}
+		
+		if (lastVisit != null) {
+			out.println(lastVisit.getValue());
+		}
+		lastVisit = new Cookie("obecnosc", new Date().toString());
+		response.addCookie(lastVisit);
