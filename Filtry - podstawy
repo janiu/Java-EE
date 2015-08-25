@@ -1,0 +1,21 @@
+TWORZENIE FILTRA:
+1) XML
+* Miedzy tagi <web-app> </web-app> dodajemy:
+  <filter-mapping>
+        <filter-name>TimeToExecute</filter-name>          //nazwa klasy filtra
+        <url-pattern>/*</url-pattern>                     //adres url
+  </filter-mapping>
+    
+2) Klasa filtra
+* Implementujemy interfejs Filter
+* przed klasa piszemy: @WebFilter(filterName="TimeToExecute")      //nazwa filtra
+
+METODY:
+    * void init(FilterConfig fc) 
+    metoda wywoływana jest przy utworzeniu filtru. Pozwala na uzyskanie obiektu interfejsu FilterConfig odpowiedzialnego za ustawienia filtru.
+    
+    * void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) 
+    jest wywoływana w momencie nadejścia żądania. Interfejs FilterChain zapewnia komunikację pomiędzy filtrem, a servletem. 
+    
+    * void destroy() 
+    metoda wywoływana przez serwer w momencie zakończenia działania filtru.
