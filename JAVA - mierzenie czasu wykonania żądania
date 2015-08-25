@@ -1,0 +1,16 @@
+1) XML
+ <filter-mapping>
+        <filter-name>TimeToExecute</filter-name>
+        <url-pattern>/*</url-pattern>
+</filter-mapping>
+
+2) JAVA
+@WebFilter(filterName="TimeToExecute")
+public class TimeToExecute implements  Filter{
+	@Override
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)	throws IOException, ServletException {
+		    long startTime = System.currentTimeMillis();        //aktualny czas przed żadaniem
+        chain.doFilter(request, response);                  // zostaje wywolane to co jest w serwlecie
+        long stopTime = System.currentTimeMillis();         //aktualny czas po żadaniu
+        System.out.println("Time to execute request: " + (stopTime - startTime) + " milliseconds");
+	}}
